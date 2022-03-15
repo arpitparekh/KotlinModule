@@ -1,0 +1,10 @@
+private fun bitmapToString(bitmap: Bitmap) {
+
+        val baos:ByteArrayOutputStream= ByteArrayOutputStream()
+        bitmap.compress(Bitmap.CompressFormat.JPEG,100,baos)
+
+        val byte:ByteArray=baos.toByteArray()
+        val imageString=Base64.encodeToString(byte,Base64.DEFAULT)
+
+        Log.i("imageString",imageString)
+    }
